@@ -1,0 +1,235 @@
+{
+  "_id": {
+    "$oid": "6a027f837c110372c2b8adb5"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:16:51.225Z"
+  },
+  "usuario_raw": "Buenas tardes, qué carreras tiene",
+  "usuario": "buenas tardes que carreras tiene",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a027f967c110372c2b8adb6"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:17:10.136Z"
+  },
+  "usuario_raw": "Tienen la ingeniería en computación ?",
+  "usuario": "tienen la ingenieria en computacion ",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a027fa97c110372c2b8adb7"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:17:29.656Z"
+  },
+  "usuario_raw": "Conoces el grupo de 8tavo",
+  "usuario": "conoces el grupo de 8tavo",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+
+{
+  "_id": {
+    "$oid": "6a027fb07c110372c2b8adb8"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:17:36.155Z"
+  },
+  "usuario_raw": "Dime qué sabes",
+  "usuario": "dime que sabes",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a027fd17c110372c2b8adb9"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:18:09.652Z"
+  },
+  "usuario_raw": "Cómo se define un entorno variable",
+  "usuario": "como se define un entorno variable",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a027feb7c110372c2b8adba"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:18:35.813Z"
+  },
+  "usuario_raw": "Realmente no sabes nada? o no me quieres responder?",
+  "usuario": "realmente no sabes nada o no me quieres responder",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a027ff97c110372c2b8adbb"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:18:49.988Z"
+  },
+  "usuario_raw": "Qué te gustaría aprender?",
+  "usuario": "que te gustaria aprender",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+
+{
+  "_id": {
+    "$oid": "6a0280007c110372c2b8adbc"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:18:56.012Z"
+  },
+  "usuario_raw": "Cómo me llamo?",
+  "usuario": "como me llamo",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a02800d7c110372c2b8adbd"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:19:09.156Z"
+  },
+  "usuario_raw": "Cuantos semestres tiene la carrera de computación?",
+  "usuario": "cuantos semestres tiene la carrera de computacion",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a0280197c110372c2b8adbe"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:19:21.478Z"
+  },
+  "usuario_raw": "Cúal es el costo de inscripcion?",
+  "usuario": "cual es el costo de inscripcion",
+  "respuesta": "Las mensualidades dependen de la carrera. ¿Te interesa alguna en específico?",
+  "reconocido": true
+}{
+  "_id": {
+    "$oid": "6a02801e7c110372c2b8adbf"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:19:26.759Z"
+  },
+  "usuario_raw": "carreras",
+  "usuario": "carreras",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a0280297c110372c2b8adc0"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:19:37.823Z"
+  },
+  "usuario_raw": "Mensualidad de las carreras",
+  "usuario": "mensualidad de las carreras",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a0280347c110372c2b8adc1"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:19:48.091Z"
+  },
+  "usuario_raw": "¿Qué carreras tienes?",
+  "usuario": "que carreras tienes",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a0280537c110372c2b8adc2"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:20:19.941Z"
+  },
+  "usuario_raw": "Maneras de titulación",
+  "usuario": "maneras de titulacion",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a02805d7c110372c2b8adc3"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:20:29.777Z"
+  },
+  "usuario_raw": "Enseñan inglés?",
+  "usuario": "ensenan ingles",
+  "respuesta": "No entiendo tu pregunta, pero la guardaré para aprender.",
+  "reconocido": false
+}
+{
+  "_id": {
+    "$oid": "6a028076d2308db5a678969a"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:20:54.702Z"
+  },
+  "usuario_raw": "hola",
+  "usuario": "hola",
+  "respuesta": "¡Hola! Soy el asistente de la UNE. ¿En qué puedo ayudarte?",
+  "reconocido": true
+}
+{
+  "_id": {
+    "$oid": "6a02807dd2308db5a678969b"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:21:01.640Z"
+  },
+  "usuario_raw": "horario",
+  "usuario": "horario",
+  "respuesta": "Atendemos de lunes a viernes de 9:00 AM a 6:00 PM.",
+  "reconocido": true
+}
+{
+  "_id": {
+    "$oid": "6a028083d2308db5a678969c"
+  },
+  "fase": "s1",
+  "timestamp": {
+    "$date": "2026-05-12T01:21:07.525Z"
+  },
+  "usuario_raw": "costos",
+  "usuario": "costos",
+  "respuesta": "Las mensualidades dependen de la carrera. ¿Te interesa alguna en específico?",
+  "reconocido": true
+}
