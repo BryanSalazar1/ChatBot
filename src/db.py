@@ -2,6 +2,7 @@ from pymongo import MongoClient, ASCENDING
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 import os
+import uuid
 
 load_dotenv()
 
@@ -22,6 +23,8 @@ def get_db():
         # Crear índices para consultas eficientes
         _db["sesiones"].create_index([("timestamp", ASCENDING)])
         _db["sesiones"].create_index([("reconocido", ASCENDING)])
+        _db["memoria"].create_index([("session_id", ASCENDING)])
+        _db["memoria"].create_index([("timestamp", ASCENDING)])
         print("[DB] Conexión a MongoDB establecida.")
     return _db
 
@@ -69,3 +72,56 @@ def estadisticas():
         "tasa_exito": round((reconocidos / total * 100), 1) if total else 0,
         "por_fase": por_fase
     }
+
+# ── Fase 3: Memoria conversacional ───────────────────────────────────────────
+
+def nueva_sesion_id():
+    """Genera un ID único para una sesión de conversación."""
+    return str(uuid.uuid4())
+
+def guardar_turno_memoria(session_id, role, content):
+    """Guarda un turno (usuario o asistente) en la colección 'memoria'."""
+    db = get_db()
+    doc = {
+        "session_id": session_id,
+        "role": role,        # "user" o "assistant"
+        "content": content,
+        "timestamp": datetime.now(timezone.utc),
+    }
+    return str(db["memoria"].insert_one(doc).inserted_id)
+
+def obtener_historial(session_id, limite=10):
+    """Devuelve los últimos N turnos de una sesión (sin _id ni timestamp)."""
+    db = get_db()
+    cursor = db["memoria"].find(
+        {"session_id": session_id},
+        {"_id": 0, "role": 1, "content": 1}
+    ).sort("timestamp", ASCENDING).limit(limite)
+    return list(cursor)
+
+# ── Fase 3: RAG desde MongoDB ─────────────────────────────────────────────────
+
+def buscar_contexto_rag(query_texto, limite=5):
+    """Recupera Q&A previas relevantes para enriquecer el prompt del LLM (RAG)."""
+    db = get_db()
+    docs = list(
+        db["sesiones"].find(
+            {"reconocido": True},
+            {"_id": 0, "usuario_raw": 1, "respuesta": 1, "similitud": 1}
+        ).sort("similitud", -1).limit(80)
+    )
+    if not docs:
+        return []
+
+    try:
+        from sklearn.feature_extraction.text import TfidfVectorizer
+        from sklearn.metrics.pairwise import cosine_similarity
+
+        textos = [d["usuario_raw"] for d in docs]
+        vectorizer = TfidfVectorizer()
+        matrix = vectorizer.fit_transform(textos + [query_texto])
+        sims = cosine_similarity(matrix[-1], matrix[:-1]).flatten()
+        indices = sims.argsort()[-limite:][::-1]
+        return [docs[i] for i in indices if sims[i] > 0.05]
+    except Exception:
+        return docs[:limite]
